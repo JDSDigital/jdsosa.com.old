@@ -1,7 +1,7 @@
 /*eslint-disable*/
 import React from "react"
 // react components for routing our app without refresh
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles"
@@ -9,14 +9,10 @@ import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import Tooltip from "@material-ui/core/Tooltip"
 
-// @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons"
-
 // React icons
-import { FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa"
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 
 // core components
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx"
 import Button from "components/CustomButtons/Button.jsx"
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx"
@@ -25,32 +21,9 @@ function HeaderLinks({ ...props }) {
   const { classes } = props
   return (
     <List className={classes.list}>
-      {/* <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="Components"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent",
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/components" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>,
-          ]}
-        />
-      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Tooltip
-          id="instagram-twitter"
+          id="link-twitter"
           title="Follow me on twitter"
           placement={
             typeof window !== "undefined" && window.innerWidth > 959
@@ -71,8 +44,8 @@ function HeaderLinks({ ...props }) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
-          id="instagram-facebook"
-          title="Follow me on facebook"
+          id="link-linkedin"
+          title="Follow me on LinkedIn"
           placement={
             typeof window !== "undefined" && window.innerWidth > 959
               ? "top"
@@ -82,18 +55,18 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/jdsosa"
+            href="https://www.linkedin.com/in/jdsosa/"
             target="_blank"
             className={classes.navLink}
           >
-            <FaFacebook />
+            <FaLinkedin />
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Follow us on instagram"
+          title="Follow me on Github"
           placement={
             typeof window !== "undefined" && window.innerWidth > 959
               ? "top"
@@ -103,11 +76,11 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/thebeliar"
+            href="https://www.github.com/jdsdigital"
             target="_blank"
             className={classes.navLink}
           >
-            <FaInstagram />
+            <FaGithub />
           </Button>
         </Tooltip>
       </ListItem>

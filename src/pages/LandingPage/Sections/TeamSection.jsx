@@ -1,168 +1,122 @@
-import React from "react";
+import React from "react"
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from "classnames"
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from "@material-ui/core/styles/withStyles"
 
 // @material-ui/icons
 
 // React icons
-import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa"
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardFooter from "components/Card/CardFooter.jsx";
+import GridContainer from "components/Grid/GridContainer.jsx"
+import GridItem from "components/Grid/GridItem.jsx"
+import Button from "components/CustomButtons/Button.jsx"
+import Card from "components/Card/Card.jsx"
+import CardBody from "components/Card/CardBody.jsx"
+import CardFooter from "components/Card/CardFooter.jsx"
+import Tooltip from "@material-ui/core/Tooltip"
 
-import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
+import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx"
 
-import team1 from "assets/img/faces/avatar.jpg";
-import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
+import profile from "assets/img/faces/profile.jpg"
 
 class TeamSection extends React.Component {
   render() {
-    const { classes } = this.props;
+    const { classes } = this.props
     const imageClasses = classNames(
       classes.imgRaised,
       classes.imgRoundedCircle,
       classes.imgFluid
-    );
+    )
     return (
       <div className={classes.section}>
-        <h2 className={classes.title}>Here is our team</h2>
+        <h2 className={classes.title}>Here is the guy</h2>
         <div>
-          <GridContainer>
+          <GridContainer justify="center" alignItems="center">
             <GridItem xs={12} sm={12} md={4}>
               <Card plain>
                 <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team1} alt="..." className={imageClasses} />
+                  <img src={profile} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
-                  Gigi Hadid
+                  Jorge Daniel Sosa
                   <br />
-                  <small className={classes.smallTitle}>Model</small>
+                  <small className={classes.smallTitle}>Web Developer</small>
                 </h4>
                 <CardBody>
                   <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
+                    Experienced Fullstack Web Developer with a background in IT
+                    and System Administration and high problem-solving skills.
                   </p>
                 </CardBody>
                 <CardFooter className={classes.justifyCenter}>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
+                  <Tooltip
+                    id="link-twitter"
+                    title="Follow me on twitter"
+                    placement={
+                      typeof window !== "undefined" && window.innerWidth > 959
+                        ? "top"
+                        : "left"
+                    }
+                    classes={{ tooltip: classes.tooltip }}
                   >
-                    <FaTwitter/>
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
+                    <Button
+                      href="https://twitter.com/thebeliar"
+                      target="_blank"
+                      color="transparent"
+                      className={classes.navLink}
+                    >
+                      <FaTwitter />
+                    </Button>
+                  </Tooltip>
+                  <Tooltip
+                    id="link-linkedin"
+                    title="Follow me on LinkedIn"
+                    placement={
+                      typeof window !== "undefined" && window.innerWidth > 959
+                        ? "top"
+                        : "left"
+                    }
+                    classes={{ tooltip: classes.tooltip }}
                   >
-                    <FaInstagram/>
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
+                    <Button
+                      color="transparent"
+                      href="https://www.linkedin.com/in/jdsosa/"
+                      target="_blank"
+                      className={classes.navLink}
+                    >
+                      <FaLinkedin />
+                    </Button>
+                  </Tooltip>
+                  <Tooltip
+                    id="instagram-tooltip"
+                    title="Follow me on Github"
+                    placement={
+                      typeof window !== "undefined" && window.innerWidth > 959
+                        ? "top"
+                        : "left"
+                    }
+                    classes={{ tooltip: classes.tooltip }}
                   >
-                    <FaFacebook/>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={4}>
-              <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team2} alt="..." className={imageClasses} />
-                </GridItem>
-                <h4 className={classes.cardTitle}>
-                  Christian Louboutin
-                  <br />
-                  <small className={classes.smallTitle}>Designer</small>
-                </h4>
-                <CardBody>
-                  <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
-                  </p>
-                </CardBody>
-                <CardFooter className={classes.justifyCenter}>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <FaTwitter/>
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <FaLinkedin/>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={4}>
-              <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
-                  <img src={team3} alt="..." className={imageClasses} />
-                </GridItem>
-                <h4 className={classes.cardTitle}>
-                  Kendall Jenner
-                  <br />
-                  <small className={classes.smallTitle}>Model</small>
-                </h4>
-                <CardBody>
-                  <p className={classes.description}>
-                    You can write here details about one of your team members.
-                    You can give more details about what they do. Feel free to
-                    add some <a href="#pablo">links</a> for people to be able to
-                    follow them outside the site.
-                  </p>
-                </CardBody>
-                <CardFooter className={classes.justifyCenter}>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <FaTwitter/>
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <FaInstagram/>
-                  </Button>
-                  <Button
-                    justIcon
-                    color="transparent"
-                    className={classes.margin5}
-                  >
-                    <FaFacebook/>
-                  </Button>
+                    <Button
+                      color="transparent"
+                      href="https://www.github.com/jdsdigital"
+                      target="_blank"
+                      className={classes.navLink}
+                    >
+                      <FaGithub />
+                    </Button>
+                  </Tooltip>
                 </CardFooter>
               </Card>
             </GridItem>
           </GridContainer>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(teamStyle)(TeamSection);
+export default withStyles(teamStyle)(TeamSection)
