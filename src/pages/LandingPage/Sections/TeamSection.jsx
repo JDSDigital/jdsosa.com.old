@@ -35,9 +35,9 @@ class TeamSection extends React.Component {
         <h2 className={classes.title}>Here is the guy</h2>
         <div>
           <GridContainer justify="center" alignItems="center">
-            <GridItem xs={12} sm={12} md={4}>
+            <GridItem xs={12} sm={12} md={5}>
               <Card plain>
-                <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
+                <GridItem xs={12} sm={12} md={5} className={classes.itemGrid}>
                   <img src={profile} alt="..." className={imageClasses} />
                 </GridItem>
                 <h4 className={classes.cardTitle}>
