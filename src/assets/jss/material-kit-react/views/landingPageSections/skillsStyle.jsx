@@ -2,7 +2,7 @@ import { title } from "assets/jss/material-kit-react.jsx"
 
 const skillsStyle = {
   section: {
-    padding: "0",
+    padding: "0 0 20px",
     textAlign: "center",
   },
   title: {
