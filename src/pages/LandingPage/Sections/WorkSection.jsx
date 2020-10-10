@@ -56,8 +56,14 @@ class WorkSection extends React.Component {
             </h4>
           </GridItem>
           <GridContainer justify="center" className={classes.portfolio}>
-            {portfolio.map(item => (
-              <GridItem xs={12} sm={6} md={4} className={classes.portfolioItem}>
+            {portfolio.map((item, index) => (
+              <GridItem
+                key={`portfolio-${index}`}
+                xs={12}
+                sm={6}
+                md={4}
+                className={classes.portfolioItem}
+              >
                 <Link href={item.url} target="_blank">
                   <img
                     src={item.image}
