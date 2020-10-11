@@ -20,7 +20,7 @@ import Tooltip from "@material-ui/core/Tooltip"
 
 import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx"
 
-import profile from "assets/img/faces/profile.jpg"
+import profile from "assets/img/faces/profile.webp"
 
 class TeamSection extends React.Component {
   render() {
@@ -32,19 +32,21 @@ class TeamSection extends React.Component {
     )
     return (
       <div className={classes.section}>
-        <h2 className={classes.title}>Here is the guy</h2>
+        <h2 className={classes.title}>About me</h2>
         <div>
           <GridContainer justify="center" alignItems="center">
-            <GridItem xs={12} sm={12} md={5}>
+            <GridItem xs={12} sm={8} md={6}>
               <Card plain>
-                <GridItem xs={12} sm={8} md={5} className={classes.itemGrid}>
+                <GridItem xs={8} sm={8} md={6} className={classes.itemGrid}>
                   <img src={profile} alt="..." className={imageClasses} />
                 </GridItem>
-                <h4 className={classes.cardTitle}>
+                <h3 className={classes.cardTitle}>
                   Jorge Daniel Sosa
                   <br />
-                  <small className={classes.smallTitle}>Web Developer</small>
-                </h4>
+                  <small className={classes.smallTitle}>
+                    Fullstack Web Developer
+                  </small>
+                </h3>
                 <CardBody>
                   <p className={classes.description}>
                     Experienced Fullstack Web Developer with a background in IT
@@ -65,6 +67,7 @@ class TeamSection extends React.Component {
                     <Button
                       href="https://twitter.com/thebeliar"
                       target="_blank"
+                      rel="noopener"
                       color="transparent"
                       className={classes.navLink}
                     >
@@ -85,6 +88,7 @@ class TeamSection extends React.Component {
                       color="transparent"
                       href="https://www.linkedin.com/in/jdsosa/"
                       target="_blank"
+                      rel="noopener"
                       className={classes.navLink}
                     >
                       <FaLinkedin />
@@ -104,6 +108,7 @@ class TeamSection extends React.Component {
                       color="transparent"
                       href="https://www.github.com/jdsdigital"
                       target="_blank"
+                      rel="noopener"
                       className={classes.navLink}
                     >
                       <FaGithub />

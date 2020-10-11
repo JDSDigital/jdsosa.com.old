@@ -13,31 +13,31 @@ const portfolio = [
   {
     title: "Carrito Fácil",
     description: "E-commerce website",
-    image: `${baseImageUrl}/carrito.png`,
+    image: `${baseImageUrl}/carrito.webp`,
     url: "https://carritofacil.cl",
   },
   {
     title: "Veconinter",
     description: "Ocean Billing Management",
-    image: `${baseImageUrl}/veconinter.png`,
+    image: `${baseImageUrl}/veconinter.webp`,
     url: "https://veconinter.com",
   },
   {
     title: "Geknology Techno Services",
     description: "IT services and web development",
-    image: `${baseImageUrl}/geknology.png`,
+    image: `${baseImageUrl}/geknology.webp`,
     url: "https://geknology.com",
   },
   {
     title: "Dra. Estética",
     description: "Aesthetics clinic",
-    image: `${baseImageUrl}/draestetica.png`,
+    image: `${baseImageUrl}/draestetica.webp`,
     url: "https://draestetica.com",
   },
   {
     title: "Ávila Inversiones",
     description: "Real estate agency",
-    image: `${baseImageUrl}/avila.png`,
+    image: `${baseImageUrl}/avila.webp`,
     url: "https://avilainversiones.com",
   },
 ]
@@ -51,9 +51,9 @@ class WorkSection extends React.Component {
         <GridContainer justify="center">
           <GridItem cs={12} sm={12} md={8}>
             <h2 className={classes.title}>Portfolio</h2>
-            <h4 className={classes.description}>
+            <p className={classes.description}>
               Here are some of my recent projects
-            </h4>
+            </p>
           </GridItem>
           <GridContainer justify="center" className={classes.portfolio}>
             {portfolio.map((item, index) => (
@@ -64,7 +64,7 @@ class WorkSection extends React.Component {
                 md={4}
                 className={classes.portfolioItem}
               >
-                <Link href={item.url} target="_blank">
+                <Link href={item.url} target="_blank" rel="noopener">
                   <img
                     src={item.image}
                     alt={item.title}

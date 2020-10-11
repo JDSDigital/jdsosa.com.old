@@ -20,12 +20,12 @@ class SkillsSection extends React.Component {
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Skills</h2>
-            <h5 className={classes.description}>
+            <p className={classes.description}>
               I have 1 year of experience as a Javascript Fullstack Developer,
               but ever since I've started programming professionaly in 2016 I've
               worked in both backend (PHP+MySQL) and frontend (Bootstrap+SASS)
               positions.
-            </h5>
+            </p>
           </GridItem>
         </GridContainer>
         <div>

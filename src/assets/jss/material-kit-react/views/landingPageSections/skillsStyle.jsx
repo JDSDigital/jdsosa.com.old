@@ -13,7 +13,8 @@ const skillsStyle = {
     textDecoration: "none",
   },
   description: {
-    color: "#999",
+    color: "#555",
+    fontSize: "18px",
   },
 }
 

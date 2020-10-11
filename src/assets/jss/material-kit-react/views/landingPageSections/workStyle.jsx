@@ -12,8 +12,9 @@ const workStyle = {
     textAlign: "center",
   },
   description: {
-    color: "#999",
+    color: "#444",
     textAlign: "center",
+    fontSize: "18px",
   },
   textCenter: {
     textAlign: "center",
@@ -40,11 +41,11 @@ const workStyle = {
       margin: "16px 0 0 0",
     },
     "& p": {
-      color: "#999",
+      color: "#555",
     },
   },
   portfolioItem: {
-    marginBottom: "25px",
+    marginBottom: "35px",
   },
 }
 

@@ -43,7 +43,7 @@ function SkillsArea<Props>({ ...props }) {
         <props.icon className={iconClasses} />
       </div>
       <div className={classes.descriptionWrapper}>
-        <h4 className={classes.title}>{title}</h4>
+        <h3 className={classes.title}>{title}</h3>
         <ul className={classes.description}>
           {description.map((skill: object, index: number) => (
             <li key={`skill-${title}-${index}`}>{skill}</li>

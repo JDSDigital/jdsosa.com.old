@@ -44,6 +44,7 @@ function Footer({ ...props }) {
             href="https://github.com/JDSDigital"
             className={aClasses}
             target="_blank"
+            rel="noopener"
           >
             JDSDigital
           </a>

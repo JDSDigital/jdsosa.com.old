@@ -17,13 +17,15 @@ const teamStyle = {
   itemGrid: {
     marginLeft: "auto",
     marginRight: "auto",
+    marginBottom: "20px",
   },
   cardTitle,
   smallTitle: {
     color: "#6c757d",
   },
   description: {
-    color: "#999",
+    color: "#555",
+    fontSize: "18px",
   },
   justifyCenter: {
     justifyContent: "center !important",

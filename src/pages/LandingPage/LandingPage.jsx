@@ -45,15 +45,15 @@ class LandingPage extends React.Component {
           }}
           {...rest}
         />
-        <Parallax filter image={require("assets/img/3.jpg")}>
+        <Parallax filter image={require("assets/img/header.webp")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
                 <h1 className={classes.title}>A developer with passion!</h1>
-                <h4>
+                <p className={classes.subtitle}>
                   I'm Jorge Daniel Sosa. Fullstack JS developer with a strong
                   background in systems administration.
-                </h4>
+                </p>
               </GridItem>
             </GridContainer>
           </div>

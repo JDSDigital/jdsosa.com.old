@@ -35,6 +35,7 @@ function HeaderLinks({ ...props }) {
           <Button
             href="https://twitter.com/thebeliar"
             target="_blank"
+            rel="noopener"
             color="transparent"
             className={classes.navLink}
           >
@@ -57,6 +58,7 @@ function HeaderLinks({ ...props }) {
             color="transparent"
             href="https://www.linkedin.com/in/jdsosa/"
             target="_blank"
+            rel="noopener"
             className={classes.navLink}
           >
             <FaLinkedin />
@@ -78,6 +80,7 @@ function HeaderLinks({ ...props }) {
             color="transparent"
             href="https://www.github.com/jdsdigital"
             target="_blank"
+            rel="noopener"
             className={classes.navLink}
           >
             <FaGithub />

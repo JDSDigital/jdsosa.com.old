@@ -37,20 +37,20 @@ const skillsStyle = {
     color: roseColor,
   },
   gray: {
-    color: grayColor,
+    color: "#555",
   },
   icon: {
     width: "36px",
     height: "36px",
   },
   descriptionWrapper: {
-    color: grayColor,
+    color: "#555",
   },
   title,
   description: {
-    color: grayColor,
+    color: "#555",
     marginTop: "0px",
-    fontSize: "14px",
+    fontSize: "16px",
     padding: "0",
 
     "& li": {
