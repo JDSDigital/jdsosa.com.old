@@ -5,7 +5,6 @@ import {
   successColor,
   infoColor,
   roseColor,
-  grayColor,
   title,
 } from "assets/jss/material-kit-react.jsx"
 

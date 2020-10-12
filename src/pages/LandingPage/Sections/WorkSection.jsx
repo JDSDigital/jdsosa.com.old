@@ -8,36 +8,41 @@ import GridContainer from "components/Grid/GridContainer.jsx"
 import GridItem from "components/Grid/GridItem.jsx"
 import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx"
 
-const baseImageUrl = "./images/portfolio"
+import carrito from "assets/img/portfolio/carrito.webp"
+import veconinter from "assets/img/portfolio/veconinter.webp"
+import geknology from "assets/img/portfolio/geknology.webp"
+import draestetica from "assets/img/portfolio/draestetica.webp"
+import avila from "assets/img/portfolio/avila.webp"
+
 const portfolio = [
   {
     title: "Carrito Fácil",
     description: "E-commerce website",
-    image: `${baseImageUrl}/carrito.webp`,
+    image: carrito,
     url: "https://carritofacil.cl",
   },
   {
     title: "Veconinter",
     description: "Ocean Billing Management",
-    image: `${baseImageUrl}/veconinter.webp`,
+    image: veconinter,
     url: "https://veconinter.com",
   },
   {
     title: "Geknology Techno Services",
     description: "IT services and web development",
-    image: `${baseImageUrl}/geknology.webp`,
+    image: geknology,
     url: "https://geknology.com",
   },
   {
     title: "Dra. Estética",
     description: "Aesthetics clinic",
-    image: `${baseImageUrl}/draestetica.webp`,
+    image: draestetica,
     url: "https://draestetica.com",
   },
   {
     title: "Ávila Inversiones",
     description: "Real estate agency",
-    image: `${baseImageUrl}/avila.webp`,
+    image: avila,
     url: "https://avilainversiones.com",
   },
 ]
@@ -71,7 +76,7 @@ class WorkSection extends React.Component {
                     className={classes.portfolioImage}
                   />
                 </Link>
-                <h5>{item.title}</h5>
+                <h3>{item.title}</h3>
                 <hr />
                 <p>{item.description}</p>
               </GridItem>

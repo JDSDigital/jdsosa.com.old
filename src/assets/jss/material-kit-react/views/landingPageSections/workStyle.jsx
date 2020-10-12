@@ -36,9 +36,10 @@ const workStyle = {
   },
   portfolio: {
     margin: "30px 0",
-    "& h5": {
+    "& h3": {
       color: "#3C4858",
       margin: "16px 0 0 0",
+      fontSize: "20px",
     },
     "& p": {
       color: "#555",

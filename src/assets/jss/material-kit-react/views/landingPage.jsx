@@ -19,7 +19,7 @@ const landingPageStyle = {
     fontSize: "1.313rem",
     lineHeight: "1.3",
     maxWidth: "500px",
-    margin: "10px auto 0",
+    margin: "10px 0",
   },
   main: {
     background: "#FFFFFF",
@@ -27,7 +27,7 @@ const landingPageStyle = {
     zIndex: "3",
   },
   mainRaised: {
-    ["@media (min-width:576px)"]: {
+    "@media (min-width:576px)": {
       margin: "-20px 30px 0px",
       borderRadius: "6px",
       boxShadow:

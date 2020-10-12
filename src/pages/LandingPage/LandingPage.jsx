@@ -16,7 +16,7 @@ import GridContainer from "components/Grid/GridContainer.jsx"
 import GridItem from "components/Grid/GridItem.jsx"
 import HeaderLinks from "components/Header/HeaderLinks.jsx"
 import Parallax from "components/Parallax/Parallax.jsx"
-import SEO from "components/seo.jsx"
+import SEO from "components/SEO.tsx"
 
 import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx"
 
@@ -36,7 +36,6 @@ class LandingPage extends React.Component {
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="JDSosa"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
