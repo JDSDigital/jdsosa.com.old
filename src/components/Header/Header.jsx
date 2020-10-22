@@ -73,6 +73,7 @@ class Header extends React.Component {
       color,
       rightLinks,
       leftLinks,
+      drawerLinks,
       fixed,
       absolute,
     } = this.props
@@ -124,8 +125,7 @@ class Header extends React.Component {
             onClose={this.handleDrawerToggle}
           >
             <div className={classes.appResponsive}>
-              {leftLinks}
-              {rightLinks}
+              {drawerLinks ? drawerLinks : rightLinks}
             </div>
           </Drawer>
         </Hidden>

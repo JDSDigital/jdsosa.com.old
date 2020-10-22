@@ -18,7 +18,7 @@ import Button from "components/CustomButtons/Button.jsx"
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx"
 
 function HeaderLinks({ ...props }) {
-  const { classes } = props
+  const { classes, drawer } = props
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -40,6 +40,7 @@ function HeaderLinks({ ...props }) {
             className={classes.navLink}
           >
             <FaTwitter />
+            {drawer && <span className={classes.marginLeft10}>Twitter</span>}
           </Button>
         </Tooltip>
       </ListItem>
@@ -62,6 +63,7 @@ function HeaderLinks({ ...props }) {
             className={classes.navLink}
           >
             <FaLinkedin />
+            {drawer && <span className={classes.marginLeft10}>LinkedIn</span>}
           </Button>
         </Tooltip>
       </ListItem>
@@ -84,6 +86,7 @@ function HeaderLinks({ ...props }) {
             className={classes.navLink}
           >
             <FaGithub />
+            {drawer && <span className={classes.marginLeft10}>Github</span>}
           </Button>
         </Tooltip>
       </ListItem>
