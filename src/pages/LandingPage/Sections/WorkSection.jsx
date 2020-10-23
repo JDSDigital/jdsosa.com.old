@@ -1,4 +1,5 @@
 import React from "react"
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles"
 import Link from "@material-ui/core/Link"
@@ -7,49 +8,11 @@ import Link from "@material-ui/core/Link"
 import GridContainer from "components/Grid/GridContainer.jsx"
 import GridItem from "components/Grid/GridItem.jsx"
 import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx"
-
-import carrito from "assets/img/portfolio/carrito.webp"
-import veconinter from "assets/img/portfolio/veconinter.webp"
-import geknology from "assets/img/portfolio/geknology.webp"
-import draestetica from "assets/img/portfolio/draestetica.webp"
-import avila from "assets/img/portfolio/avila.webp"
-
-const portfolio = [
-  {
-    title: "Carrito Fácil",
-    description: "E-commerce website",
-    image: carrito,
-    url: "https://carritofacil.cl",
-  },
-  {
-    title: "Veconinter",
-    description: "Ocean Billing Management",
-    image: veconinter,
-    url: "https://veconinter.com",
-  },
-  {
-    title: "Geknology Techno Services",
-    description: "IT services and web development",
-    image: geknology,
-    url: "https://geknology.com",
-  },
-  {
-    title: "Dra. Estética",
-    description: "Aesthetics clinic",
-    image: draestetica,
-    url: "https://draestetica.com",
-  },
-  {
-    title: "Ávila Inversiones",
-    description: "Real estate agency",
-    image: avila,
-    url: "https://avilainversiones.com",
-  },
-]
+// import Img from "gatsby-image"
 
 class WorkSection extends React.Component {
   render() {
-    const { classes } = this.props
+    const { classes, portfolio } = this.props
 
     return (
       <div className={classes.section}>
@@ -71,7 +34,7 @@ class WorkSection extends React.Component {
               >
                 <Link href={item.url} target="_blank" rel="noopener">
                   <img
-                    src={item.image}
+                    src={`portfolio/${item.image}`}
                     alt={item.title}
                     className={classes.portfolioImage}
                   />

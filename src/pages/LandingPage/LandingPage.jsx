@@ -29,7 +29,8 @@ const dashboardRoutes = []
 
 class LandingPage extends React.Component {
   render() {
-    const { classes, ...rest } = this.props
+    const { classes, portfolio } = this.props
+
     return (
       <div>
         <SEO />
@@ -43,7 +44,6 @@ class LandingPage extends React.Component {
             height: 400,
             color: "white",
           }}
-          {...rest}
         />
         <Parallax filter image={require("assets/img/header.webp")}>
           <div className={classes.container}>
@@ -62,7 +62,7 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <TeamSection />
             <SkillsSection />
-            <WorkSection />
+            <WorkSection portfolio={portfolio} />
           </div>
         </div>
         <Footer />

@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: `/mini-gatsbyv2-material-kit-react`,
   siteMetadata: {
@@ -23,7 +27,7 @@ module.exports = {
         background_color: "#663399",
         theme_color: "#663399",
         display: "minimal-ui",
-        icon: "src/assets/img/logo.png", // This path is relative to the root of the site.
+        icon: "src/assets/img/logo.png",
       },
     },
     {
@@ -31,6 +35,28 @@ module.exports = {
       options: {
         host: "https://jdsosa.com",
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: "gatsby-source-mongodb",
+      options: {
+        dbName: process.env.GATSBY_DB_NAME,
+        collection: process.env.GATSBY_DB_COLLECTIONS,
+        connectionString: process.env.GATSBY_DB_CONNECTION_STRING,
+        server: {
+          address: process.env.GATSBY_DB_URL,
+          port: process.env.GATSBY_DB_PORT,
+        },
+        auth: {
+          user: process.env.GATSBY_DB_USER,
+          password: process.env.GATSBY_DB_PASS,
+        },
+        extraParams: {
+          ssl: true,
+          replicaSet: process.env.GATSBY_DB_REPLICA_SET,
+          authSource: process.env.GATSBY_DB_AUTH_SOURCE,
+          retryWrites: true,
+        },
       },
     },
   ],
